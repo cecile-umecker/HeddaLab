@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
     HeaderComponent,
     FooterComponent,
     ExploreComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
