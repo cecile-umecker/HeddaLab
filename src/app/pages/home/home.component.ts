@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { POSTS } from '../../content/posts';
+import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
 
 @Component({
@@ -10,30 +10,19 @@ import { Post } from '../../models/post.model';
 })
 export class HomeComponent implements OnInit {
 
-  posts: Post[] = [];
   latestPosts: Post[] = [];
-  lastRandomIndex: number | null = null;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private postService: PostService) {}
 
   ngOnInit() {
-    const sortedPosts = POSTS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    this.latestPosts = sortedPosts.slice(0, 3);
-    this.posts = sortedPosts;
+    this.latestPosts = this.postService.getPosts().slice(0, 3);
   }
 
   goToRandomPost() {
-    if (this.posts.length === 0) return;
-
-    let randomIndex: number;
-
-    do {
-      randomIndex = Math.floor(Math.random() * this.posts.length);
-    } while (randomIndex === this.lastRandomIndex && this.posts.length > 1);
-
-    this.lastRandomIndex = randomIndex;
-
-    const randomPost = this.posts[randomIndex];
-    this.router.navigate([randomPost.path]);
+    const randomPost = this.postService.getRandomPost();
+    if (randomPost) {
+      this.router.navigate([randomPost.path]);
+      console.log(randomPost.title)
+    }
   }
 }
