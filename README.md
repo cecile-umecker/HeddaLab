@@ -12,9 +12,9 @@ This website brings together **technical developments, photography, writing, and
 ## 🛠 Technologies Used
 
 - **MaterializeCSS** – UI framework
-- **Angular / JavaScript** – Frontend
-- **Node.js (optional)** – Backend
-- **MongoDB / Firebase (optional)** – Data storage
+- **Angular / TypeScript** – Frontend
+- **Node.js** – Backend
+- **MongoDB** – Data storage
 
 ## 📄 License
 
