@@ -15,8 +15,10 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private postService: PostService) {}
 
   ngOnInit() {
-    this.latestPosts = this.postService.getPosts().slice(0, 3);
+    const posts = this.postService.getPosts();
+    this.latestPosts = posts.slice(0, 3);
   }
+  
 
   goToRandomPost() {
     const randomPost = this.postService.getRandomPost();
