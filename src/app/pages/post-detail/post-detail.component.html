@@ -1,0 +1,13 @@
+<section class="post-detail section">
+  <div class="container" *ngIf="post">
+    <h1 class="center-align">{{ post.title }}</h1>
+    <p class="center-align grey-text">{{ post.category | titlecase }} - {{ post.date | date }}</p>
+    <div class="post-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Ton vrai contenu sera branché plus tard)</p>
+    </div>
+  </div>
+
+  <div *ngIf="!post" class="container center-align">
+    <p>Chargement...</p>
+  </div>
+</section>

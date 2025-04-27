@@ -33,7 +33,7 @@
             <p class="grey-text">{{ post.category | titlecase }}</p>
           </div>
           <div class="card-action">
-            <a [routerLink]="post.path">Voir</a>
+            <a [routerLink]="['/post', post.id]">Voir</a>
           </div>
         </div>
       </div>

@@ -21,6 +21,11 @@ export class PostService {
     return POSTS.find(post => post.path === path);
   }
 
+  getPostById(id: number): Post | undefined {
+    return POSTS.find(post => post.id === id);
+  }
+  
+
   getPostsByCategory(category: string): Post[] {
     return POSTS
       .filter(post => post.category.toLowerCase() === category.toLowerCase())
