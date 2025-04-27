@@ -1,39 +1,62 @@
-<div class="section center-align">
-  <h1>Bienvenue sur Heddalab</h1>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <p>Découvrez mes projets, mon portfolio, mes photos et plus encore !</p>
-  <a class="btn-large waves-effect waves-light teal" routerLink="/projects">Voir les projets</a>
-</div>
+<section class="home-intro section">
+  <div class="container">
+    <h2 class="home-tagline center-align">
+      <span class="accent-color">Et si les idées pouvaient pousser librement&nbsp;?</span>
+    </h2>
+    <h1 class="home-title">
+      Bienvenue sur <span class="accent-color">Heddalab</span>
+    </h1>
+    <p>
+      Ici, pas de cases à cocher ni de chemins tout tracés.  
+      Heddalab est un espace d'exploration et de création libre, où projets, récits, photos et idées se croisent et évoluent au gré de l'inspiration.
+    </p>
+
+    <p>
+      Je partage ici mes expériences, mes réflexions et mes essais, en écriture, photographie, développement web et bien d’autres domaines.
+    </p>
+
+    <p>
+      Heddalab est un laboratoire vivant, pensé pour tester, imaginer, construire... et parfois, laisser les idées s'envoler.
+    </p>
+
+    <p class="highlight center-align accent-color">
+      Chaque clic est une nouvelle expérience.
+    </p>
+  </div>
+</section>
+
+<section class="home-latest-articles section">
+  <div class="container">
+    <h3 class="center-align">Derniers articles</h3>
+
+    <div class="row">
+      <div class="col s12 m4" *ngFor="let post of posts">
+        <div class="card hoverable">
+          <div class="card-content">
+            <span class="card-title">{{ post.title }}</span>
+            <p class="grey-text">{{ post.category | titlecase }}</p>
+          </div>
+          <div class="card-action">
+            <a [routerLink]="post.path">Voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="home-explore section">
+  <div class="container center-align">
+    <h3 class="explore-title">Envie d'en voir plus ?</h3>
+    <p class="explore-text">
+      Heddalab regorge d'idées, de projets créatifs et d'aventures à découvrir. 
+      Laissez-vous guider par votre curiosité !
+    </p>
+    <a class="btn waves-effect waves-light" routerLink="/explore">
+      Découvrir
+    </a>
+  </div>
+</section>
+

@@ -1,0 +1,46 @@
+.section {
+  padding: 4rem 0;
+}
+
+section.home-intro p:not(.highlight) {
+  text-align: justify;
+}
+
+.home-highlight {
+  background-color: #f5f5f5;
+  padding: 4rem 0;
+}
+
+.card .card-action a {
+  color: #00796b;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.accent-color {
+  color: #00796b; /* ou une couleur qui matche ton header */
+  font-weight: 600;
+}
+
+.home-explore {
+  background-color: #f5f5f5; /* léger fond gris clair pour changer du blanc */
+  padding: 4rem 0;
+
+  .explore-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .explore-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  a.btn {
+    background-color: #00796b;
+  }
+}
