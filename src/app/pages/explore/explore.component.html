@@ -1,7 +1,7 @@
 <section class="explore-list section">
   <div class="container">
-    <h1 class="center-align">Explorer HeddaLab</h1>
-
+    <h1 *ngIf="!currentCategory">Explorer HeddaLab</h1>
+    <h1 *ngIf="currentCategory">Explorer {{ displayCategory }}</h1>
     <div class="row">
       <div *ngIf="loading" class="loading-container">
         <div class="preloader-wrapper big active">

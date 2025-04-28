@@ -1,6 +1,7 @@
-import { Component, ChangeDetectorRef  } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostService } from '../../services/post.service';
+import { getCategoryLabel } from '../../shared/category-labels'; // à importer
 
 @Component({
   selector: 'app-explore',
@@ -11,23 +12,28 @@ export class ExploreComponent {
 
   filteredPosts: any[] = [];
   loading = true;
+  currentCategory: string | null = null;
+  displayCategory: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
-    private PostService: PostService,
+    private postService: PostService,
     private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const category = params.get('category');
+      this.currentCategory = category;
+
       if (category) {
-        // Filtrer les posts par catégorie
-        this.filteredPosts = this.PostService.getPostsByCategory(category);
+        this.filteredPosts = this.postService.getPostsByCategory(category);
+        this.displayCategory = getCategoryLabel(category); // Traduction
       } else {
-        // Montrer tous les posts
-        this.filteredPosts = this.PostService.getPosts();
+        this.filteredPosts = this.postService.getPosts();
+        this.displayCategory = null; // Explorer HeddaLab par défaut
       }
+
       this.loading = false;
       this.cdr.detectChanges();
     });
