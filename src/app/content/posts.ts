@@ -3,7 +3,7 @@ export const POSTS = [
     id: 1,
     title: 'Première photo',
     path: '/blog/photos/1',
-    category: 'photos',
+    category: 'pictures',
     date: '2025-04-01'
   },
   {

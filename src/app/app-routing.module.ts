@@ -7,9 +7,10 @@ import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'explore', component: ExploreComponent },
-  { path: 'post/:id', component: PostDetailComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'explore', component: ExploreComponent, pathMatch: 'full' },
+  { path: 'explore/:category', component: ExploreComponent },
+  { path: 'post/:id', component: PostDetailComponent },
   { path: '**', redirectTo: '' }
 ];
 

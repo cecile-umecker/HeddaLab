@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { POSTS } from '../../content/posts'; // attention au chemin relatif
+import { Component, ChangeDetectorRef  } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-explore',
@@ -8,6 +9,27 @@ import { POSTS } from '../../content/posts'; // attention au chemin relatif
 })
 export class ExploreComponent {
 
-  posts = POSTS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  filteredPosts: any[] = [];
+  loading = true;
 
+  constructor(
+    private route: ActivatedRoute,
+    private PostService: PostService,
+    private cdr: ChangeDetectorRef
+  ) {}
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const category = params.get('category');
+      if (category) {
+        // Filtrer les posts par catégorie
+        this.filteredPosts = this.PostService.getPostsByCategory(category);
+      } else {
+        // Montrer tous les posts
+        this.filteredPosts = this.PostService.getPosts();
+      }
+      this.loading = false;
+      this.cdr.detectChanges();
+    });
+  }  
 }

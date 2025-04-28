@@ -1,0 +1,36 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+
+  .preloader-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .loading-text {
+    font-size: 1.2rem;
+    color: #555;
+  }
+}
+
+.no-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; // Ou 60vh selon ton goût
+  text-align: center;
+  color: #777;
+
+  i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
