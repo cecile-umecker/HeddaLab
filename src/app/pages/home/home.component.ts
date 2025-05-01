@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   goToRandomPost() {
     const randomPost = this.postService.getRandomPost();
     if (randomPost) {
-      this.router.navigate(['/post', randomPost.id]);
+      this.router.navigate(['/post', randomPost.slug]);
     }
   }  
 }

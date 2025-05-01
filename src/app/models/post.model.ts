@@ -1,9 +1,12 @@
+export type PostType = 'texte' | 'galerie' | 'mixte' | 'cuisine';
+
 export interface Post {
-  id: number;
+  id: string;
   title: string;
-  path: string;
+  slug: string;
   category: string;
+  type: PostType;
   date: string;
-  excerpt?: string;
-  coverImage?: string;
+  excerpt: string;
+  cover?: string;
 }

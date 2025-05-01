@@ -1,23 +1,32 @@
-export const POSTS = [
+import { Post } from '../models/post.model';
+
+export const POSTS: Post[] = [
   {
-    id: 1,
-    title: 'Première photo',
-    path: '/blog/photos/1',
-    category: 'pictures',
-    date: '2025-04-01'
-  },
+    id: '999',
+    title: 'Post de Test',
+    slug: 'test-post',
+    excerpt: 'Un test pour valider l’affichage Markdown.',
+    date: '2025-05-01',
+    category: 'it',
+    type: 'texte'
+  }
+  ,  
   {
-    id: 2,
+    id: '2',
     title: 'Creepypasta Splinter',
-    path: '/blog/creepypasta/1',
+    slug: 'creepypasta-splinter',
+    excerpt: 'Un test pour valider l’affichage Markdown.',
     category: 'creepypasta',
-    date: '2025-03-15'
+    date: '2025-03-15',
+    type: 'texte'
   },
   {
-    id: 3,
+    id: '3',
     title: 'Projet Drawmory',
-    path: '/projects/1',
+    slug: 'porjet-drawmory',
+    excerpt: 'Un test pour valider l’affichage Markdown.',
     category: 'projects',
-    date: '2025-03-10'
+    date: '2025-03-10',
+    type: 'texte'
   }
 ];

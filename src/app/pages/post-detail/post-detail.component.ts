@@ -10,7 +10,9 @@ import { Post } from '../../models/post.model';
 })
 export class PostDetailComponent implements OnInit {
 
-  post: Post | undefined;
+  post?: Post;
+  markdownContent = '';
+  loading = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,17 +20,30 @@ export class PostDetailComponent implements OnInit {
     private postService: PostService
   ) {}
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      const numericId = parseInt(id, 10);
-      this.post = this.postService.getPostById(numericId);
-      if (!this.post) {
-        this.router.navigate(['/']); // Redirection si ID invalide
-      }
-    } else {
+  ngOnInit(): void {
+    const slug = this.route.snapshot.paramMap.get('slug');
+    if (!slug) {
       this.router.navigate(['/']);
+      return;
     }
+
+    const foundPost = this.postService.getPosts().find(p => p.slug === slug);
+    if (!foundPost) {
+      this.router.navigate(['/']);
+      return;
+    }
+
+    this.post = foundPost;
+
+    this.postService.getMarkdownContent(slug).subscribe({
+      next: content => {
+        this.markdownContent = content;
+        this.loading = false;
+      },
+      error: () => {
+        this.markdownContent = '_Contenu introuvable._';
+        this.loading = false;
+      }
+    });
   }
-  
 }

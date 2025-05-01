@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'explore', component: ExploreComponent, pathMatch: 'full' },
   { path: 'explore/:category', component: ExploreComponent },
-  { path: 'post/:id', component: PostDetailComponent },
+  { path: 'post/:slug', component: PostDetailComponent },
   { path: '**', redirectTo: '' }
 ];
 

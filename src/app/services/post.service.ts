@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { POSTS } from '../content/posts';
 import { Post } from '../models/post.model';
 
@@ -9,7 +11,7 @@ export class PostService {
 
   private lastRandomIndex: number | null = null;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getPosts(): Post[] {
     return POSTS
@@ -17,12 +19,8 @@ export class PostService {
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
-  getPostByPath(path: string): Post | undefined {
-    return POSTS.find(post => post.path === path);
-  }
-
-  getPostById(id: number): Post | undefined {
-    return POSTS.find(post => post.id === id);
+  getPostById(slug: string): Post | undefined {
+    return POSTS.find(post => post.slug === slug);
   }
   
 
@@ -45,4 +43,9 @@ export class PostService {
     this.lastRandomIndex = randomIndex;
     return posts[randomIndex];
   }
+
+  getMarkdownContent(slug: string): Observable<string> {
+    return this.http.get(`assets/markdown/${slug}.md`, { responseType: 'text' });
+  }
+  
 }
