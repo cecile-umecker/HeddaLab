@@ -16,6 +16,8 @@ import { PostTemplateArticleComponent } from './template/post-template-article/p
 import { PostTemplateGalleryComponent } from './template/post-template-gallery/post-template-gallery.component';
 import { PostTemplateMixteComponent } from './template/post-template-mixte/post-template-mixte.component';
 import { PostTemplateCookComponent } from './template/post-template-cook/post-template-cook.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 registerLocaleData(localeFr);
 
@@ -31,7 +33,9 @@ registerLocaleData(localeFr);
     PostTemplateArticleComponent,
     PostTemplateGalleryComponent,
     PostTemplateMixteComponent,
-    PostTemplateCookComponent
+    PostTemplateCookComponent,
+    ProjectsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
