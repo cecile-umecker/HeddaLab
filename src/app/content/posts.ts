@@ -8,7 +8,7 @@ export const POSTS: Post[] = [
     excerpt: 'Un test pour valider l’affichage Markdown.',
     date: '2025-05-01',
     category: 'it',
-    type: 'texte'
+    type: 'article'
   }
   ,  
   {
@@ -18,15 +18,33 @@ export const POSTS: Post[] = [
     excerpt: 'Un test pour valider l’affichage Markdown.',
     category: 'creepypasta',
     date: '2025-03-15',
-    type: 'texte'
+    type: 'article'
   },
   {
     id: '3',
     title: 'Projet Drawmory',
-    slug: 'porjet-drawmory',
+    slug: 'projet-drawmory',
     excerpt: 'Un test pour valider l’affichage Markdown.',
     category: 'projects',
     date: '2025-03-10',
-    type: 'texte'
+    type: 'mixte'
+  },
+  {
+    id: '4',
+    title: 'Projet galerie',
+    slug: 'projet-galerie',
+    excerpt: 'Un test pour valider l’affichage Markdown.',
+    category: 'pictures',
+    date: '2025-03-10',
+    type: 'gallery'
+  },
+  {
+    id: '5',
+    title: 'Projet cuisine',
+    slug: 'projet-cuisine',
+    excerpt: 'Un test pour valider l’affichage Markdown.',
+    category: 'cook',
+    date: '2025-03-10',
+    type: 'cook'
   }
 ];

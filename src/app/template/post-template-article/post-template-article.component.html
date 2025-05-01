@@ -1,0 +1,5 @@
+<p class="grey-text">[TEMPLATE: texte]</p>
+
+<ng-container *ngIf="content">
+  <markdown [data]="content.split('---')[1] || ''"></markdown>
+</ng-container>

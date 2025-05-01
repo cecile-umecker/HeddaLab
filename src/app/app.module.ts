@@ -11,6 +11,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { AboutComponent } from './pages/about/about.component';
+import { PostTemplateArticleComponent } from './template/post-template-article/post-template-article.component';
+import { PostTemplateGalleryComponent } from './template/post-template-gallery/post-template-gallery.component';
+import { PostTemplateMixteComponent } from './template/post-template-mixte/post-template-mixte.component';
+import { PostTemplateCookComponent } from './template/post-template-cook/post-template-cook.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { AboutComponent } from './pages/about/about.component';
     FooterComponent,
     ExploreComponent,
     PostDetailComponent,
-    AboutComponent
+    AboutComponent,
+    PostTemplateArticleComponent,
+    PostTemplateGalleryComponent,
+    PostTemplateMixteComponent,
+    PostTemplateCookComponent
   ],
   imports: [
     BrowserModule,

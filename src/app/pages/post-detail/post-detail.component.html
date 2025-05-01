@@ -1,10 +1,13 @@
-<section *ngIf="post">
-  <h2>{{ post.title }}</h2>
-  <p class="grey-text">{{ post.date | date:'longDate' }}</p>
-
-  <div *ngIf="loading" class="progress">
-    <div class="indeterminate"></div>
-  </div>
-
-  <markdown *ngIf="!loading" [data]="markdownContent"></markdown>
+<section *ngIf="post && markdownContent">
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.date | date }}</p>
+  <ng-container *ngIf="post">
+    <ng-container [ngSwitch]="post.type">
+      <app-template-post-gallery *ngSwitchCase="'gallery'" [content]="markdownContent"></app-template-post-gallery>
+      <app-template-post-article *ngSwitchCase="'article'" [content]="markdownContent"></app-template-post-article>
+      <app-template-post-mixte *ngSwitchCase="'mixte'" [content]="markdownContent"></app-template-post-mixte>
+      <app-template-post-cook *ngSwitchCase="'cook'" [content]="markdownContent"></app-template-post-cook>
+    </ng-container>
+  </ng-container>
+  
 </section>
