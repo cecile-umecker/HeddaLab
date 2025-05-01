@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../models/post.model';
 
@@ -17,7 +18,8 @@ export class PostDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private postService: PostService
+    private postService: PostService,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -46,4 +48,8 @@ export class PostDetailComponent implements OnInit {
       }
     });
   }
+
+  goBack(): void {
+    this.location.back();
+  }  
 }

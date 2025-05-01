@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule } from '@angular/common/http';
-
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -15,6 +16,8 @@ import { PostTemplateArticleComponent } from './template/post-template-article/p
 import { PostTemplateGalleryComponent } from './template/post-template-gallery/post-template-gallery.component';
 import { PostTemplateMixteComponent } from './template/post-template-mixte/post-template-mixte.component';
 import { PostTemplateCookComponent } from './template/post-template-cook/post-template-cook.component';
+
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { PostTemplateCookComponent } from './template/post-template-cook/post-te
     HttpClientModule,
     MarkdownModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

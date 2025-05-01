@@ -1,13 +1,19 @@
-<section *ngIf="post && markdownContent">
-  <h1>{{ post.title }}</h1>
-  <p>{{ post.date | date }}</p>
-  <ng-container *ngIf="post">
-    <ng-container [ngSwitch]="post.type">
-      <app-template-post-gallery *ngSwitchCase="'gallery'" [content]="markdownContent"></app-template-post-gallery>
-      <app-template-post-article *ngSwitchCase="'article'" [content]="markdownContent"></app-template-post-article>
-      <app-template-post-mixte *ngSwitchCase="'mixte'" [content]="markdownContent"></app-template-post-mixte>
-      <app-template-post-cook *ngSwitchCase="'cook'" [content]="markdownContent"></app-template-post-cook>
+<section>
+  <a class="back-btn btn-flat teal-text text-darken-3" (click)="goBack()">
+    <i class="material-icons left">arrow_back</i>
+    Retour
+  </a>
+  <div *ngIf="post && markdownContent">
+    <h1 class="post-title">{{ post.title }}</h1>
+
+    <p class="post-date">{{ post.date | date:'fullDate' }}</p>
+    <ng-container *ngIf="post">
+      <ng-container [ngSwitch]="post.type">
+        <app-template-post-gallery *ngSwitchCase="'gallery'" [content]="markdownContent"></app-template-post-gallery>
+        <app-template-post-article *ngSwitchCase="'article'" [content]="markdownContent"></app-template-post-article>
+        <app-template-post-mixte *ngSwitchCase="'mixte'" [content]="markdownContent"></app-template-post-mixte>
+        <app-template-post-cook *ngSwitchCase="'cook'" [content]="markdownContent"></app-template-post-cook>
+      </ng-container>
     </ng-container>
-  </ng-container>
-  
+  </div>
 </section>
