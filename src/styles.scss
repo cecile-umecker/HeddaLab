@@ -20,3 +20,11 @@ app-root {
 main {
   flex: 1 0 auto;
 }
+
+.sidenav-overlay {
+  z-index: 995 !important;
+}
+
+.sidenav {
+  z-index: 996 !important;
+}
