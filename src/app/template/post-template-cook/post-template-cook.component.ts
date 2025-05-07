@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-template-post-cook',
@@ -7,4 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PostTemplateCookComponent {
   @Input() content: string = '';
+  @Input() post!: Post;
+
 }

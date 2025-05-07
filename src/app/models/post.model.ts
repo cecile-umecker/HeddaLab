@@ -9,4 +9,8 @@ export interface Post {
   date: string;
   excerpt: string;
   cover?: string;
+  prepTime?: string;
+  cookTime?: string;
+  totalTime?: string;
+  ingredients?: string[];
 }

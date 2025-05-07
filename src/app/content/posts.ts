@@ -40,11 +40,21 @@ export const POSTS: Post[] = [
   },
   {
     id: '5',
-    title: 'Projet cuisine',
+    title: 'Pain maison facile',
     slug: 'projet-cuisine',
-    excerpt: 'Un test pour valider l’affichage Markdown.',
+    excerpt: 'Un pain moelleux et croustillant, à portée de main.',
     category: 'cook',
     date: '2025-03-10',
-    type: 'cook'
+    type: 'cook',
+    cover: 'src\assets\images\about-photo.png',
+    prepTime: '15 min',
+    cookTime: '25 min',
+    totalTime: '1h40',
+    ingredients: [
+      '500g de farine',
+      '1 sachet de levure boulangère',
+      '1 cuillère à café de sel',
+      '300ml d’eau tiède'
+    ]
   }
 ];

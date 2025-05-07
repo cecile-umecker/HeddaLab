@@ -1,5 +1,17 @@
-<p class="grey-text">[TEMPLATE: cook]</p>
-
-<ng-container *ngIf="content">
-  <markdown [data]="content.split('---')[1] || ''"></markdown>
-</ng-container>
+<div class="recipe-container">
+  <img class="recipe-image" src="assets/images/{{ post.slug }}.jpg" alt="{{ post.title }}" />
+  <div class="recipe-times">
+    <p><strong>Préparation :</strong> {{ post.prepTime }}</p>
+    <p><strong>Cuisson :</strong> {{ post.cookTime }}</p>
+    <p><strong>Total :</strong> {{ post.totalTime }}</p>
+  </div>
+  <div class="recipe-ingredients">
+    <h4>Ingrédients</h4>
+    <ul class="columns">
+      <li *ngFor="let item of post?.ingredients">{{ item }}</li>
+    </ul>
+  </div>
+  <div class="recipe-content">
+    <markdown [data]="content"></markdown>
+  </div>
+</div>
