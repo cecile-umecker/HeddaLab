@@ -46,7 +46,7 @@ export const POSTS: Post[] = [
     category: 'cook',
     date: '2025-03-10',
     type: 'cook',
-    cover: 'src\assets\images\about-photo.png',
+    cover: 'about-photo.png',
     prepTime: '15 min',
     cookTime: '25 min',
     totalTime: '1h40',

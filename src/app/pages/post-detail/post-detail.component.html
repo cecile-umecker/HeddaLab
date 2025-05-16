@@ -7,10 +7,10 @@
     <p>{{ post.date | date }}</p>
     <ng-container *ngIf="post">
       <ng-container [ngSwitch]="post.type">
-        <app-template-post-gallery *ngSwitchCase="'gallery'" [content]="markdownContent"></app-template-post-gallery>
-        <app-template-post-article *ngSwitchCase="'article'" [content]="markdownContent"></app-template-post-article>
-        <app-template-post-mixte *ngSwitchCase="'mixte'" [content]="markdownContent"></app-template-post-mixte>
-        <app-template-post-cook *ngSwitchCase="'cook'" [content]="markdownContent"></app-template-post-cook>
+        <app-template-post-gallery *ngSwitchCase="'gallery'" [content]="markdownContent" ></app-template-post-gallery>
+        <app-template-post-article *ngSwitchCase="'article'" [content]="markdownContent" ></app-template-post-article>
+        <app-template-post-mixte *ngSwitchCase="'mixte'" [content]="markdownContent" ></app-template-post-mixte>
+        <app-template-post-cook *ngSwitchCase="'cook'" [content]="markdownContent" [post]="post"></app-template-post-cook>
       </ng-container>
     </ng-container>
   </div>

@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PostCookComponent } from './post-template-cook.component';
+import { PostTemplateCookComponent  } from './post-template-cook.component';
 
 describe('PostCookComponent', () => {
-  let component: PostCookComponent;
-  let fixture: ComponentFixture<PostCookComponent>;
+  let component: PostTemplateCookComponent ;
+  let fixture: ComponentFixture<PostTemplateCookComponent >;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PostCookComponent]
+      declarations: [PostTemplateCookComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostCookComponent);
+    fixture = TestBed.createComponent(PostTemplateCookComponent );
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
