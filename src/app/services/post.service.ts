@@ -19,6 +19,12 @@ export class PostService {
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
+  getProjects(exclusiveTypes: string[] = ['project']): Post[] {
+    return POSTS
+      .filter(post => exclusiveTypes.includes(post.type))
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }
+
   getPostById(slug: string): Post | undefined {
     return POSTS.find(post => post.slug === slug);
   }

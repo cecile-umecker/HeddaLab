@@ -1,1 +1,18 @@
-<p>projects works!</p>
+<div class="projects-container">
+  <h1>Projets</h1>
+
+  <section class="skills-grid">
+    <div class="skill-category" *ngFor="let group of skillGroups">
+      <h4>{{ group.label }}</h4>
+      <div class="skill-icons">
+        <div class="icon" *ngFor="let skill of group.skills" title="{{ skill.name }}">
+          <i [class]="skill.iconClass"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-list">
+
+  </section>
+</div>
