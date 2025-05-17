@@ -8,7 +8,7 @@ export const POSTS: Post[] = [
     excerpt: 'Un test pour valider l’affichage Markdown.',
     date: '2025-05-01',
     category: 'it',
-    type: 'article'
+    type: 'mixte'
   }
   ,  
   {
