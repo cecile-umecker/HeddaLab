@@ -2,7 +2,7 @@ import { Post } from '../models/post.model';
 
 export const POSTS: Post[] = [
   {
-    id: '999',
+    id: '1',
     title: 'Post de Test',
     slug: 'test-post',
     excerpt: 'Un test pour valider l’affichage Markdown.',
@@ -27,7 +27,7 @@ export const POSTS: Post[] = [
     excerpt: 'Un test pour valider l’affichage Markdown.',
     category: 'projects',
     date: '2025-03-10',
-    type: 'mixte'
+    type: 'project'
   },
   {
     id: '4',

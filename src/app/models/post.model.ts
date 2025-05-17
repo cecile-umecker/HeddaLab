@@ -1,4 +1,4 @@
-export type PostType = 'article' | 'gallery' | 'mixte' | 'cook';
+export type PostType = 'article' | 'gallery' | 'mixte' | 'cook' | 'project';
 
 export interface Post {
   id: string;

@@ -1,8 +1,8 @@
-# Ceci est un post de test
+#### Ceci est un post de test
 
 Bienvenue sur ce premier article en **Markdown** !
 
-## Sous-titre
+##### Sous-titre
 
 - Un
 - Deux

@@ -18,6 +18,7 @@ import { PostTemplateMixteComponent } from './template/post-template-mixte/post-
 import { PostTemplateCookComponent } from './template/post-template-cook/post-template-cook.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { CategoryLabelPipe } from './pipes/category-label.pipe';
 
 registerLocaleData(localeFr);
 
@@ -35,7 +36,8 @@ registerLocaleData(localeFr);
     PostTemplateMixteComponent,
     PostTemplateCookComponent,
     ProjectsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CategoryLabelPipe
   ],
   imports: [
     BrowserModule,

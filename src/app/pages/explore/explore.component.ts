@@ -28,10 +28,10 @@ export class ExploreComponent {
 
       if (category) {
         this.filteredPosts = this.postService.getPostsByCategory(category);
-        this.displayCategory = getCategoryLabel(category); // Traduction
+        this.displayCategory = getCategoryLabel(category);
       } else {
         this.filteredPosts = this.postService.getPosts();
-        this.displayCategory = null; // Explorer HeddaLab par défaut
+        this.displayCategory = null;
       }
 
       this.loading = false;

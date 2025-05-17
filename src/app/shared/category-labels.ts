@@ -3,7 +3,8 @@ export function getCategoryLabel(key: string): string {
     'creepypasta': 'Creepypastas',
     'cook': 'Cuisine',
     'pictures': 'Photos',
-    'it': 'Tech'
+    'it': 'Tech',
+    'project': 'Projet'
   };
   return map[key] || key; // fallback au cas où
 }

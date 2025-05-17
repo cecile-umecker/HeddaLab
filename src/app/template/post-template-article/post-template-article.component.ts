@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-template-post-article',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PostTemplateArticleComponent {
   @Input() content: string = '';
+  @Input() post!: Post;
 }

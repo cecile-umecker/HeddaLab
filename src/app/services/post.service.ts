@@ -13,9 +13,9 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts(): Post[] {
+  getPosts(excludedTypes: string[] = ['project']): Post[] {
     return POSTS
-      .slice()
+      .filter(post => !excludedTypes.includes(post.type))
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
