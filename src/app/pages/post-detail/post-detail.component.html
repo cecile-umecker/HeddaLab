@@ -3,8 +3,8 @@
     <i class="material-icons left">arrow_back</i>
     Retour
   </a>
-  <div *ngIf="post && markdownContent">  <h3>{{ post.title }}</h3>
-    <p>{{ post.date | date }}</p>
+  <div *ngIf="post && markdownContent">  <h3 class="post-title">{{ post.title }}</h3>
+    <p class="post-date">{{ post.date | date }}</p>
     <ng-container *ngIf="post">
       <ng-container [ngSwitch]="post.type">
         <app-template-post-gallery *ngSwitchCase="'gallery'" [content]="markdownContent" ></app-template-post-gallery>
