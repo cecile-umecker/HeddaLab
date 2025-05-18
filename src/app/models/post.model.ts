@@ -1,7 +1,6 @@
 export type PostType = 'article' | 'gallery' | 'mixte' | 'cook' | 'project';
 
 export interface Post {
-  id: string;
   title: string;
   slug: string;
   category: string;
@@ -13,4 +12,5 @@ export interface Post {
   cookTime?: string;
   totalTime?: string;
   ingredients?: string[];
+  stack?: string[];
 }

@@ -13,6 +13,21 @@
   </section>
 
   <section class="project-list">
-
+    <div class="project-card" *ngFor="let project of projects">
+      <h5 class="project-title">{{ project.title }}</h5>
+      <div class="project-image" *ngIf="project.cover">
+        <img [src]="project.cover" [alt]="project.title" />
+      </div>
+      <p class="project-excerpt">{{ project.excerpt }}</p>
+      <div class="project-stack" *ngIf="project.stack?.length">
+        <span class="chip" *ngFor="let tech of project.stack">
+          {{ tech }}
+        </span>
+      </div>
+      <a [routerLink]="['/article', project.slug]" class="btn-flat teal-text text-darken-2">
+        Voir le projet
+        <i class="material-icons right">arrow_forward</i>
+      </a>
+    </div>
   </section>
 </div>
