@@ -1,7 +1,8 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostService } from '../../services/post.service';
-import { getCategoryLabel } from '../../shared/category-labels'; // à importer
+import { getCategoryLabel } from '../../shared/category-labels';
+import { Paginator } from '../../shared/paginator';
 
 @Component({
   selector: 'app-explore',
@@ -9,8 +10,10 @@ import { getCategoryLabel } from '../../shared/category-labels'; // à importer
   styleUrls: ['./explore.component.scss']
 })
 export class ExploreComponent {
-
   filteredPosts: any[] = [];
+  paginatedPosts: any[] = [];
+  paginator!: Paginator<any>;
+
   loading = true;
   currentCategory: string | null = null;
   displayCategory: string | null = null;
@@ -26,16 +29,33 @@ export class ExploreComponent {
       const category = params.get('category');
       this.currentCategory = category;
 
-      if (category) {
-        this.filteredPosts = this.postService.getPostsByCategory(category);
-        this.displayCategory = getCategoryLabel(category);
-      } else {
-        this.filteredPosts = this.postService.getPosts();
-        this.displayCategory = null;
-      }
+      this.filteredPosts = category
+        ? this.postService.getPostsByCategory(category)
+        : this.postService.getPosts();
+
+      this.displayCategory = category ? getCategoryLabel(category) : null;
+
+      this.paginator = new Paginator(this.filteredPosts, 10);
+      this.paginatedPosts = this.paginator.getPage(1);
 
       this.loading = false;
       this.cdr.detectChanges();
     });
-  }  
+  }
+
+  setPage(page: number): void {
+    this.paginatedPosts = this.paginator.getPage(page);
+  }
+
+  getPageRange(): number[] {
+    return this.paginator.getPageRange();
+  }
+
+  get currentPage(): number {
+    return this.paginator.currentPage;
+  }
+
+  get totalPages(): number {
+    return this.paginator.totalPages;
+  }
 }
