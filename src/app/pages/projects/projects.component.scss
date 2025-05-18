@@ -50,71 +50,126 @@ $text-light: #616161;
 }
 
 .project-card {
-  background: $bg-card;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
 
-  .project-image {
+  .card-content {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 200px;
-    overflow: hidden;
+  }
+
+  .image-column {
+    flex: 0 0 40%;
+    max-width: 40%;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
       border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
     }
   }
 
+  .info-column {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .project-title {
-    padding: 1rem 1.5rem 0;
-    font-weight: bold;
-    color: $primary-dark;
     font-size: 1.25rem;
+    font-weight: bold;
+    color: #004d40;
+    margin: 0 0 0.5rem;
   }
 
   .project-excerpt {
-    padding: 0.5rem 1.5rem 1rem;
-    color: $text-light;
-    flex-grow: 1;
+    color: #616161;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    height: 4.2em; // 3 lignes * 1.4 line-height
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes */
+    -webkit-box-orient: vertical;
   }
 
   .project-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0 1.5rem 1rem;
+    margin-bottom: 1rem;
 
-    .chip {
+    .tech-chip {
       background-color: #ffe0b2;
-      color: $accent;
+      color: #ff6f00;
       font-weight: 600;
       font-size: 0.8rem;
       padding: 0 0.75rem;
       border-radius: 16px;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+
+    .tech-chip.muted {
+      background-color: #eeeeee;
+      color: #757575;
+      font-weight: normal;
+      cursor: default;
     }
   }
 
-  a.btn-flat {
-    margin: 0 1.5rem 1rem;
-    align-self: flex-start;
-    font-weight: bold;
-    padding-left: 0;
-    color: $primary;
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
 
-    i {
-      vertical-align: middle;
+    .github-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      i {
+        font-size: 28px; // équilibré avec le bouton Démo
+      }
+    }
+
+    .demo-play-button {
+      width: 28px;
+      height: 28px;
+      background-color: #009688;
+      color: white !important;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+
+      &:hover {
+        background-color: #00796b;
+        transform: scale(1.1);
+      }
+
+      i {
+        font-size: 18px;
+      }
     }
   }
 }

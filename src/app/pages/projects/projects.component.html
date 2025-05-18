@@ -1,6 +1,5 @@
 <div class="projects-container">
-  <h1>Projets</h1>
-
+  <h3>Compétences</h3>
   <section class="skills-grid">
     <div class="skill-category" *ngFor="let group of skillGroups">
       <h4>{{ group.label }}</h4>
@@ -12,22 +11,36 @@
     </div>
   </section>
 
-  <section class="project-list">
-    <div class="project-card" *ngFor="let project of projects">
-      <h5 class="project-title">{{ project.title }}</h5>
-      <div class="project-image" *ngIf="project.cover">
-        <img [src]="project.cover" [alt]="project.title" />
+  <section class="projects-section">
+    <h3>Projets</h3>
+    <div class="project-list">
+      <div class="project-card" *ngFor="let project of projects">
+        <div class="card-content">
+          <div class="image-column">
+            <img [src]="project.cover" [alt]="project.title" />
+          </div>
+          <div class="info-column">
+            <h5 class="project-title">{{ project.title }}</h5>
+            <p class="project-excerpt">{{ project.excerpt }}</p>
+
+            <div class="project-stack" *ngIf="project.stack?.length">
+              <ng-container *ngFor="let tech of project.stack?.slice(0, 4)">
+                <span class="tech-chip">{{ tech }}</span>
+              </ng-container>
+              <span *ngIf="project.stack && project.stack.length > 4" class="tech-chip muted">...</span>
+            </div>
+            <div class="project-links">
+              <a *ngIf="project.github" [href]="project.github" target="_blank" title="Voir le dépôt GitHub" class="github-icon">
+                <i class="devicon-github-original colored"></i>
+              </a>
+
+              <a *ngIf="project.demo" [href]="project.demo" target="_blank" title="Voir la démo" class="demo-play-button">
+                <i class="material-icons">play_arrow</i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="project-excerpt">{{ project.excerpt }}</p>
-      <div class="project-stack" *ngIf="project.stack?.length">
-        <span class="chip" *ngFor="let tech of project.stack">
-          {{ tech }}
-        </span>
-      </div>
-      <a [routerLink]="['/article', project.slug]" class="btn-flat teal-text text-darken-2">
-        Voir le projet
-        <i class="material-icons right">arrow_forward</i>
-      </a>
     </div>
   </section>
 </div>

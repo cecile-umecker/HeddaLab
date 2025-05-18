@@ -13,4 +13,6 @@ export interface Post {
   totalTime?: string;
   ingredients?: string[];
   stack?: string[];
+  github?: string;
+  demo?: string;
 }

@@ -13,7 +13,7 @@ export const POSTS: Post[] = [
   {
     title: 'Creepypasta Splinter',
     slug: 'creepypasta-splinter',
-    excerpt: 'Un test pour valider l’affichage Markdown.',
+    excerpt: 'Un test pour valider l’affichage Markdown. Un test pour valider l’affichage Markdown. Un test pour valider l’affichage Markdown. Un test pour valider l’affichage Markdown. Un test pour valider l’affichage Markdown. Un test pour valider l’affichage Markdown. Un test pour valider l’affichage Markdown.',
     category: 'creepypasta',
     date: '2025-03-15',
     type: 'article'
@@ -21,7 +21,7 @@ export const POSTS: Post[] = [
   {
     title: 'Projet Drawmory',
     slug: 'projet-drawmory',
-    excerpt: 'Un test pour valider l’affichage Markdown.',
+    excerpt: 'Un test pour valider l’affichage MarkdownUn test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown.Un test pour valider l’affichage Markdown',
     category: 'projects',
     date: '2025-03-10',
     type: 'project',
@@ -30,8 +30,14 @@ export const POSTS: Post[] = [
       'Node.js',
       'Socket.io',
       'Angular',
+      'MongoDB',
+      'Node.js',
+      'Socket.io',
+      'Angular',
       'MongoDB'
-    ]
+    ],
+    github: 'www.github.io',
+    demo: 'www.google.fr'
   },
   {
     title: 'Projet galerie',
