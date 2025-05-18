@@ -19,6 +19,7 @@ import { PostTemplateCookComponent } from './template/post-template-cook/post-te
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CategoryLabelPipe } from './pipes/category-label.pipe';
+import { SkillsPetriComponent } from './shared/skills-petri/skills-petri.component'
 
 registerLocaleData(localeFr);
 
@@ -37,7 +38,8 @@ registerLocaleData(localeFr);
     PostTemplateCookComponent,
     ProjectsComponent,
     NotFoundComponent,
-    CategoryLabelPipe
+    CategoryLabelPipe,
+    SkillsPetriComponent
   ],
   imports: [
     BrowserModule,

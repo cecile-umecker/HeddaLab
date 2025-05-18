@@ -1,16 +1,6 @@
 <div class="projects-container">
-  <h3>Compétences</h3>
-  <section class="skills-grid">
-    <div class="skill-category" *ngFor="let group of skillGroups">
-      <h4>{{ group.label }}</h4>
-      <div class="skill-icons">
-        <div class="icon" *ngFor="let skill of group.skills" title="{{ skill.name }}">
-          <i [class]="skill.iconClass"></i>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <h3>Compétences cultivées en milieu contrôlé</h3>
+  <app-skills-petri></app-skills-petri>
   <section class="projects-section">
     <h3>Projets</h3>
     <div class="project-list">
