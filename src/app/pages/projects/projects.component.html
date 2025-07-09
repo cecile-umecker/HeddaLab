@@ -1,6 +1,26 @@
 <div class="projects-container">
-  <h3>Compétences cultivées en milieu contrôlé</h3>
-  <app-skills-petri></app-skills-petri>
+  <div class="skills-block">
+    <h3>Compétences cultivées en milieu contrôlé</h3>
+    <div class="skill-group" *ngFor="let group of skillGroups">
+      <h4>
+        <i class="material-icons left">{{ group.icon }}</i>
+        {{ group.category }}
+      </h4>
+      <div class="badges">
+        <a
+        *ngFor="let skill of group.items"
+        class="skill-tile tooltipped"
+        [attr.data-tooltip]="getTooltipContent(skill)" 
+        [attr.data-skill-id]="getSkillId(skill.label)"
+        target="_blank"
+        rel="noopener noreferrer"
+        [href]="skill.url">
+        <i [class]="skill.icon"></i>
+      </a>
+      </div>
+    </div>
+  </div>
+  <br>
   <section class="projects-section">
     <h3>Projets</h3>
     <div class="project-list">
