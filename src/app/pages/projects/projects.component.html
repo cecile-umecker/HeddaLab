@@ -1,25 +1,32 @@
 <div class="projects-container">
-  <div class="skills-block">
-    <h3>Compétences cultivées en milieu contrôlé</h3>
-    <div class="skill-group" *ngFor="let group of skillGroups">
-      <h4>
-        <i class="material-icons left">{{ group.icon }}</i>
-        {{ group.category }}
-      </h4>
-      <div class="badges">
-        <a
-        *ngFor="let skill of group.items"
-        class="skill-tile tooltipped"
-        [attr.data-tooltip]="getTooltipContent(skill)" 
-        [attr.data-skill-id]="getSkillId(skill.label)"
-        target="_blank"
-        rel="noopener noreferrer"
-        [href]="skill.url">
-        <i [class]="skill.icon"></i>
-      </a>
+  <section class="skills-section">
+    <h3>Compétences cultivées en milieu contrôlé 
+      <i *ngIf="isTouchDevice"
+        class="material-icons mobile-tip tooltipped"
+        data-position="top"
+        data-tooltip="touch = info, double touch = doc">info_outline</i>
+    </h3>
+    <div class="skills-block">
+      <div *ngFor="let group of skillGroups" class="skill-group">
+        <span class="material-icons group-icon">{{ group.icon }}</span>
+        <div class="group-content">
+          <h4>{{ group.category }}</h4>
+          <div class="skills-grid">
+            <a
+              *ngFor="let skill of group.items"
+              [href]="skill.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="skill-tile tooltipped"
+              [attr.data-tooltip]="getTooltipContent(skill)"
+            >
+              <i [ngClass]="skill.icon"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <br>
   <section class="projects-section">
     <h3>Projets</h3>

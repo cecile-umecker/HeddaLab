@@ -74,13 +74,14 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     }
   ];
 
-
-
+  isTouchDevice: boolean = false;
+  currentTooltip: M.Tooltip | null = null;
 
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
     this.projects = this.postService.getProjects();
+    this.isTouchDevice = window.matchMedia('(hover: none)').matches;
   }
 
   getSkillId(label: string): string {
@@ -92,12 +93,59 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     return `<strong>${skill.label}</strong><br>${skill.description}`;
   }
 
+  handleMobileTooltipBehavior(): void {
+    const tiles = document.querySelectorAll<HTMLAnchorElement>('.skill-tile');
+
+    tiles.forEach(tile => {
+      let touchedOnce = false;
+
+      tile.addEventListener('touchstart', (event) => {
+        if (!touchedOnce) {
+          event.preventDefault(); // bloque le lien au 1er tap
+          touchedOnce = true;
+
+          // Simule le hover pour Materialize (ou manuellement si nécessaire)
+          tile.classList.add('hovered');
+          const tooltipInstance = M.Tooltip.getInstance(tile);
+          tooltipInstance && tooltipInstance.open();
+
+          setTimeout(() => {
+            touchedOnce = false;
+            tooltipInstance && tooltipInstance.close();
+            tile.classList.remove('hovered');
+          }, 2500); // délai avant de réinitialiser
+
+        } else {
+          // 2e tap = redirige
+          window.open(tile.href, '_blank');
+        }
+      });
+    });
+  }
+
   ngAfterViewInit() {
-    console.log('Tooltip init triggered');
     const elems = document.querySelectorAll('.tooltipped');
     M.Tooltip.init(elems, {
       html: true,
-      enterDelay: 150,
+      enterDelay: 60,
     });
+    elems.forEach((el, index) => {
+      el.addEventListener('mouseenter', () => {
+        const instance = M.Tooltip.getInstance(el);
+        if (this.currentTooltip && this.currentTooltip !== instance) {
+          this.currentTooltip.close();
+        }
+        this.currentTooltip = instance;
+      });
+
+      el.addEventListener('touchstart', () => {
+        const instance = M.Tooltip.getInstance(el);
+        if (this.currentTooltip && this.currentTooltip !== instance) {
+          this.currentTooltip.close();
+        }
+        this.currentTooltip = instance;
+      });
+    });
+    this.handleMobileTooltipBehavior();
   }
 }
