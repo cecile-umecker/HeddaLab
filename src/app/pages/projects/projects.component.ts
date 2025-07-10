@@ -53,7 +53,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         { label: 'SQLite', icon: 'devicon-sqlite-plain colored', url: 'https://www.sqlite.org/', description: 'Base de données légère embarquée' },
         { label: 'MariaDB', icon: 'devicon-mariadb-plain colored', url: 'https://mariadb.org/', description: 'Base de données relationnelle open source issue de MySQL' },
         { label: 'MongoDB', icon: 'devicon-mongodb-plain colored', url: 'https://www.mongodb.com/', description: 'Base NoSQL orientée documents' },
-        { label: 'JWT', icon: 'devicon-json-plain colored', url: 'https://jwt.io/', description: 'Authentification via JSON Web Tokens' }
       ]
     },
     {
@@ -90,10 +89,10 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         { label: 'C#', icon: 'devicon-csharp-plain colored', url: 'https://learn.microsoft.com/en-us/dotnet/csharp/', description: 'Langage orienté objet pour .NET' },
         { label: '.NET Core', icon: 'devicon-dotnetcore-plain colored', url: 'https://learn.microsoft.com/en-us/dotnet/core/', description: 'Framework multiplateforme pour apps .NET' },
         { label: 'jQuery', icon: 'devicon-jquery-plain colored', url: 'https://jquery.com/', description: 'Bibliothèque JavaScript pour manipulations DOM rapides' },
-        { label: 'Socket.IO', icon: 'devicon-nodejs-plain colored', url: 'https://socket.io/', description: 'Communication temps réel avec WebSockets' },
+        { label: 'Socket.IO', icon: 'devicon-socketio-original colored', url: 'https://socket.io/', description: 'Communication temps réel avec WebSockets' },
         { label: 'Ionic', icon: 'devicon-ionic-original colored', url: 'https://ionicframework.com/', description: 'Framework hybride pour applications mobiles avec Angular' },
         { label: 'Bash', icon: 'devicon-bash-plain colored', url: 'https://www.gnu.org/software/bash/', description: 'Scripting shell sous Linux' },
-        { label: 'PowerShell', icon: 'devicon-windows8-original colored', url: 'https://learn.microsoft.com/en-us/powershell/', description: 'Shell de scripting avancé pour Windows' },
+        { label: 'PowerShell', icon: 'devicon-powershell-plain colored', url: 'https://learn.microsoft.com/en-us/powershell/', description: 'Shell de scripting avancé pour Windows' },
         { label: 'Arduino', icon: 'devicon-arduino-plain colored', url: 'https://www.arduino.cc/', description: 'Microcontrôleur pour projets embarqués' },
         { label: 'Raspberry Pi', icon: 'devicon-raspberrypi-line colored', url: 'https://www.raspberrypi.com/', description: 'Nano-ordinateur pour prototypage et projets personnels' },
         { label: 'Unity', icon: 'devicon-unity-plain colored', url: 'https://unity.com/', description: 'Moteur de jeu 2D/3D multiplateforme' },

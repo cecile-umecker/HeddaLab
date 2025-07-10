@@ -36,8 +36,8 @@ export const POSTS: Post[] = [
       'Angular',
       'MongoDB'
     ],
-    github: 'www.github.io',
-    demo: 'www.google.fr'
+    github: 'https://www.github.io',
+    demo: 'https://www.google.fr'
   },
   {
     title: 'Projet galerie',
