@@ -1,6 +1,6 @@
 import { Post } from '../models/post.model';
 
-export const POSTS: Post[] = [
+/*
   {
     title: 'Post de Test',
     slug: 'test-post',
@@ -65,49 +65,15 @@ export const POSTS: Post[] = [
       '300ml d’eau tiède'
     ]
   },
-    {
-    title: 'Projet Drawmory2',
-    slug: 'projet-drawmory2',
-    excerpt: 'Un test pour valider l’affichage Markdown.',
-    category: 'projects',
-    date: '2025-03-10',
-    type: 'project',
-    cover: '../../assets/images/about-photo.png',
-    stack: [
-      'Node.js',
-      'Socket.io',
-      'Angular',
-      'MongoDB'
-    ]
-  },
-    {
-    title: 'Projet Drawmory3',
-    slug: 'projet-drawmory3',
-    excerpt: 'Un test pour valider l’affichage Markdown.',
-    category: 'projects',
-    date: '2025-03-10',
-    type: 'project',
-    cover: '../../assets/images/about-photo.png',
-    stack: [
-      'Node.js',
-      'Socket.io',
-      'Angular',
-      'MongoDB'
-    ]
-  },
-    {
-    title: 'Projet Drawmory4',
-    slug: 'projet-drawmory4',
-    excerpt: 'Un test pour valider l’affichage Markdown.',
-    category: 'projects',
-    date: '2025-03-10',
-    type: 'project',
-    cover: '../../assets/images/about-photo.png',
-    stack: [
-      'Node.js',
-      'Socket.io',
-      'Angular',
-      'MongoDB'
-    ]
+*/
+
+export const POSTS: Post[] = [
+  {
+    title: 'Splinter',
+    slug: 'creepypasta-splinter',
+    excerpt: 'Plongez dans l obscurité nauséabonde des égouts de New York',
+    category: 'creepypasta',
+    date: '2025-03-15',
+    type: 'article'
   },
 ];
