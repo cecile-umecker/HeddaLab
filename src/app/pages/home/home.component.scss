@@ -1,11 +1,14 @@
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 section.home-intro p:not(.highlight) {
   text-align: justify;
 }
-
+ p {
+  text-align: justify;
+ }
+ 
 .home-highlight {
   background-color: #f5f5f5;
   padding: 4rem 0;
@@ -42,5 +45,39 @@ section.home-intro p:not(.highlight) {
 
   a.btn {
     background-color: #00796b;
+  }
+}
+
+.split-flap-container {
+  display: inline-flex;
+  gap: 0.05rem;
+  perspective: 1000px;
+}
+
+.split-letter {
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: flap 0.4s ease-in-out;
+  font-weight: 600;
+  color: #ff8f00;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  text-align: center;
+  transform-origin: center top;
+  backface-visibility: hidden;
+  animation: flipVertical 0.6s ease-in-out;
+}
+
+/* Animation du flip vertical */
+@keyframes flipVertical {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg);
   }
 }

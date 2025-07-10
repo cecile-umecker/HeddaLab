@@ -1,27 +1,29 @@
 <section class="home-intro section">
   <div class="container">
-    <h2 class="home-tagline center-align">
-      <span class="accent-color">Et si les idées pouvaient pousser librement&nbsp;?</span>
-    </h2>
     <h1 class="home-title">
-      Bienvenue sur <span class="accent-color">HeddaLab</span>
+      Bienvenue sur 
+      <strong>
+        <span class="hedda-static">Hedda</span>
+        <span class="split-flap-container">
+          <span *ngFor="let letter of letterArray" class="split-letter">{{ letter }}</span>
+        </span>
+      </strong>
     </h1>
+    <br>
     <p>
       Ici, pas de cases à cocher ni de chemins tout tracés.  
       HeddaLab est un espace d'exploration et de création libre, où projets, récits, photos et idées se croisent et évoluent au gré de l'inspiration.
-    </p>
-    <p>
-      Je partage ici mes expériences, mes réflexions et mes essais, en écriture, photographie, développement web et bien d’autres domaines.
-    </p>
-    <p>
+      Je partage mes expériences, mes réflexions et mes essais, en écriture, photographie, développement web et bien d’autres domaines.
+      <br>
       HeddaLab est un laboratoire vivant, pensé pour tester, imaginer, construire... et parfois, laisser les idées s'envoler.
     </p>
-    <p class="highlight center-align accent-color">
-      Chaque clic est une nouvelle expérience.
-    </p>
+    <br>
+    <br>
+    <h5 class="home-tagline center-align">
+      <span class="accent-color">Et si les idées pouvaient pousser librement&nbsp;?</span>
+    </h5>
   </div>
 </section>
-
 <section class="home-latest-articles section">
   <div class="container">
     <h3 class="center-align">Derniers articles</h3>
