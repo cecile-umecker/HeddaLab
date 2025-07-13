@@ -98,5 +98,5 @@ export const POSTS: Post[] = [
       'Markdown'
     ],
     github: 'https://github.com/cecile-umecker/HeddaLab',
-  },
+  }, 
 ];
