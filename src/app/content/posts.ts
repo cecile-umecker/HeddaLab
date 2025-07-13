@@ -76,4 +76,12 @@ export const POSTS: Post[] = [
     date: '2025-03-15',
     type: 'article'
   },
+  {
+    title: 'Dune & Riddick',
+    slug: 'dune-theory',
+    excerpt: 'Et si les univers de Dune et Riddick cachaient une connexion ?',
+    date: '2025-07-13',
+    category: 'divers',
+    type: 'mixte'
+  }
 ];

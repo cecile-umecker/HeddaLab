@@ -11,7 +11,7 @@ import { Post } from '../../models/post.model';
 export class HomeComponent implements OnInit {
 
   latestPosts: Post[] = [];
-  flipWords = ['Lab', 'Photo', 'Tech', 'Cook', 'Write', 'Code'];
+  flipWords = ['Lab', 'Photo', 'Tech', 'Cook', 'Write', 'Code', 'Movie', 'Book'];
   currentWord = 'Lab';
   letterArray: string[] = [];
   private index = 0;

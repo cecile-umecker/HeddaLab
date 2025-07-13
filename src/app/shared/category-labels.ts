@@ -4,7 +4,8 @@ export function getCategoryLabel(key: string): string {
     'cook': 'Cuisine',
     'pictures': 'Photos',
     'it': 'Tech',
-    'project': 'Projet'
+    'project': 'Projet',
+    'divers': 'Divers',
   };
   return map[key] || key; // fallback au cas où
 }
