@@ -99,4 +99,36 @@ export const POSTS: Post[] = [
     ],
     github: 'https://github.com/cecile-umecker/HeddaLab',
   }, 
+  {
+    title: 'Le parc',
+    slug: 'creepypasta-le-parc',
+    excerpt: 'Les sorties au parc ne seront plus jamais les mêmes après ça...',
+    category: 'creepypasta',
+    date: '2025-05-01',
+    type: 'article'
+  },
+  {
+    title: 'Ce qu\'on refuse',
+    slug: 'creepypasta-ce-qu-on-refuse',
+    excerpt: 'Quand les rêveries d\'enfance rattrapent les adultes dans leurs rêves...',
+    category: 'creepypasta',
+    date: '2024-09-24',
+    type: 'article'
+  },
+  {
+    title: 'Mer d\'ondines',
+    slug: 'creepypasta-mer-d-ondines',
+    excerpt: 'Je suis né entre leurs mains, dans une lumière aveuglante et des murmures oubliés.',
+    category: 'creepypasta',
+    date: '2024-09-26',
+    type: 'article'
+  },
+    {
+    title: 'L\'allée des toxines',
+    slug: 'creepypasta-toxines',
+    excerpt: 'Juste un type au supermarché. Avec une liste de courses... déroutante !',
+    category: 'creepypasta',
+    date: '2024-09-26',
+    type: 'article'
+  },
 ];
