@@ -1,27 +1,39 @@
-# HeddaLab
+# 🧪 HeddaLab
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+**HeddaLab** is my personal digital lab: a playground, a portfolio, and a space to experiment, document, and share creative projects.  
+From code to photography, food to storytelling, this site is both a showcase and a sandbox.
 
-## Development server
+[🌐 www.heddalab.com](https://www.heddalab.com)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 What is this?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+HeddaLab is a static site built with **Angular**, deployed via **GitHub Pages**, and maintained through **automated GitHub Actions**.  
+It's designed to host multiple sections under a unified identity:
 
-## Build
+- 🖥️ Projects & code experiments  
+- 📷 Photography (film & digital)  
+- 🍳 Cooking & recipes  
+- 🧵 Personal blogs, ideas & oddities  
+- 💀 Creepypastas, stories & creative writing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 📦 Tech stack
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Angular](https://angular.io/) (SCSS, routing, modular)
+- [GitHub Pages](https://pages.github.com/) for static hosting
+- [GitHub Actions](https://github.com/features/actions) for CI/CD
+- Custom domain (`www.heddalab.com`) + HTTPS
+- Mail config for future contact forms
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠️ Getting started (dev)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git clone https://github.com/your-user/your-repo.git
+cd your-repo
+npm install
+ng serve
