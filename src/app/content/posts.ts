@@ -71,7 +71,7 @@ export const POSTS: Post[] = [
   {
     title: 'Splinter',
     slug: 'creepypasta-splinter',
-    excerpt: 'Plongez dans l obscurité nauséabonde des égouts de New York',
+    excerpt: 'Plongez dans l\'obscurité nauséabonde des égouts de New York',
     category: 'creepypasta',
     date: '2025-03-15',
     type: 'article'
@@ -83,5 +83,20 @@ export const POSTS: Post[] = [
     date: '2025-07-13',
     category: 'divers',
     type: 'mixte'
-  }
+  },
+  {
+    title: 'HeddaLab V1',
+    slug: 'projet-heddalab',
+    excerpt: 'V1 statique du site HeddaLab. Le but est de centraliser et présenter différents contenus via un frontend Angular sans backend. Le design repose sur MaterializeCSS, avec une structure modulaire permettant une future migration vers une V2 avec backend, interface admin, multilingue et gestion d\'images.',
+    category: 'projects',
+    date: '2025-03-10',
+    type: 'project',
+    cover: '../../assets/images/about-photo.png',
+    stack: [
+      'Angular',
+      'MaterializeCSS',
+      'Markdown'
+    ],
+    github: 'https://github.com/cecile-umecker/HeddaLab',
+  },
 ];
