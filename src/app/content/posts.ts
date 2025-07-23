@@ -131,4 +131,12 @@ export const POSTS: Post[] = [
     date: '2024-09-26',
     type: 'article'
   },
+    {
+    title: 'Échapper à l\'Hydre',
+    slug: 'degoogliser',
+    excerpt: 'Dégooglisation : entre idéal éthique et contraintes du quotidien.',
+    date: '2025-07-23',
+    category: 'it',
+    type: 'article'
+  }
 ];
